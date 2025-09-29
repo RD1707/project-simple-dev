@@ -286,19 +286,26 @@ function animateOnScroll() {
     duration: 0.8,
     ease: "power2.out"
   }, "-=0.6")
-  .to(".skills__stats", {
+  .to(".skills__metrics", {
     x: 0,
     opacity: 1,
     duration: 1,
     ease: "power2.out"
   }, "-=0.4")
-  .to(".stat-card", {
+  .to(".metric-item", {
     y: 0,
     opacity: 1,
-    duration: 0.6,
+    duration: 0.8,
+    ease: "power2.out",
+    stagger: 0.2
+  }, "-=0.6")
+  .to(".metric-divider", {
+    scaleX: 1,
+    opacity: 1,
+    duration: 0.5,
     ease: "power2.out",
     stagger: 0.1
-  }, "-=0.6");
+  }, "-=0.4");
 
   // Contact section
   gsap.timeline({
@@ -338,7 +345,9 @@ function animateOnScroll() {
 // Smooth scroll navigation
 document.addEventListener('DOMContentLoaded', function() {
   const navItems = document.querySelectorAll('.nav__item[data-target]');
+  const mobileNavItems = document.querySelectorAll('.mobile-menu__item[data-target]');
 
+  // Handle desktop navigation
   navItems.forEach(item => {
     item.addEventListener('click', function() {
       const targetId = this.getAttribute('data-target');
@@ -355,5 +364,65 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
     });
+  });
+
+  // Handle mobile navigation
+  mobileNavItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+
+      // Close mobile menu first
+      closeMobileMenu();
+
+      if (targetSection) {
+        gsap.to(window, {
+          duration: 1.5,
+          scrollTo: {
+            y: targetSection,
+            offsetY: 80
+          },
+          ease: "power2.inOut"
+        });
+      }
+    });
+  });
+
+  // Hamburger menu functionality
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+
+  function openMobileMenu() {
+    hamburger.classList.add('active');
+    mobileMenuOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    hamburger.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('active')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+
+  // Close menu when clicking overlay
+  mobileMenuOverlay.addEventListener('click', function(e) {
+    if (e.target === mobileMenuOverlay) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close menu on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+      closeMobileMenu();
+    }
   });
 });

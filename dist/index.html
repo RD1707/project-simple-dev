@@ -48,18 +48,38 @@
   <div class="header__container">
     <div class="header__logo">simple</div>
     <div class="header__contact">
-      available for freelance<br>
-      hello@simple.dev
+      available for work<br>
+      souplemonpie@gmail.com
     </div>
     <nav class="header__nav">
-      <div class="nav__item" data-target="projects">projects</div>
-      <div class="nav__item" data-target="about">about</div>
-      <div class="nav__item" data-target="contact">contact</div>
-      <div class="circles-container">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
+      <div class="nav__desktop">
+        <div class="nav__item" data-target="about">about</div>
+        <div class="nav__item" data-target="projects">projects</div>
+        <div class="nav__item" data-target="contact">contact</div>
+        <div class="circles-container">
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+        </div>
+      </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="nav__mobile">
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
       </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu__item" data-target="about">about</div>
+        <div class="mobile-menu__item" data-target="projects">projects</div>
+        <div class="mobile-menu__item" data-target="contact">contact</div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -67,12 +87,12 @@
 <section class="hero">
   <div class="container">
     <div class="hero__content">
-      <div class="hero__project">simple portfolio / 2024</div>
+      <div class="hero__project">simple portfolio / 2025</div>
       <h1 class="hero__title">
         <span class="hero__title-line">clean</span>
         <span class="hero__title-line">code</span>
       </h1>
-      <p class="hero__description">passionate developer focused on creating elegant solutions through clean, efficient code. transforming complex ideas into simple, functional applications.</p>
+      <p class="hero__description">a developer focused on creating solutions through clean, efficient code. transforming complex ideas into simple, functional applications.</p>
       <div class="hero__meta">
         <div>
           <p>speciality</p>
@@ -102,7 +122,7 @@
       <div class="about__quote">
         <p>"in the vast cosmos of code, i find beauty in simplicity and elegance in functionality"</p>
       </div>
-      <p class="about__description">passionate developer navigating the infinite possibilities of technology. focused on creating elegant solutions through clean, efficient code that bridges the gap between complex problems and simple user experiences.</p>
+      <p class="about__description">a developer navigating the infinite possibilities of technology. focused on creating solutions through clean, efficient code that bridges the gap between complex problems and simple user experiences.</p>
 
       <div class="about__extended-bio">
         <p>my journey in software development began with a curiosity for understanding how things work beneath the surface. over the years, i've cultivated expertise in both frontend and backend technologies, always prioritizing user experience and code maintainability.</p>
@@ -143,7 +163,7 @@
           <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
         </div>
         <div class="project-card__content">
-          <h3 class="project-card__title">e-commerce platform</h3>
+          <h3 class="project-card__title">e-commerce platforms</h3>
           <p class="project-card__description">full-stack e-commerce solution with payment integration</p>
           <div class="project-card__tech">
             <span>vue.js</span>
@@ -157,7 +177,7 @@
           <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
         </div>
         <div class="project-card__content">
-          <h3 class="project-card__title">task management app</h3>
+          <h3 class="project-card__title">task management apps</h3>
           <p class="project-card__description">collaborative project management tool with real-time updates</p>
           <div class="project-card__tech">
             <span>typescript</span>
@@ -277,7 +297,6 @@
             <span class="direct-link-text">hello@simple.dev</span>
           </a>
           <a href="https://github.com/simple" class="direct-link">
-            <span class="direct-link-icon">⚡</span>
             <span class="direct-link-text">github.com/simple</span>
           </a>
         </div>
