@@ -1,5 +1,5 @@
 // Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger, CustomEase);
+gsap.registerPlugin(ScrollTrigger, CustomEase, ScrollToPlugin);
 // Custom ease animations (inspired by the article)
 CustomEase.create("customEase", "0.6, 0.01, 0.05, 1");
 CustomEase.create("directionalEase", "0.16, 1, 0.3, 1");
@@ -179,4 +179,180 @@ function animateHero() {
     },
     "-=1.2"
   );
+
+  // Add scroll animations for new sections
+  animateOnScroll();
 }
+
+// Scroll animations for all sections
+function animateOnScroll() {
+  // About section animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  // About section
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse"
+    }
+  })
+  .to(".about__project", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  })
+  .to(".about__title-line", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    stagger: 0.15
+  }, "-=0.4")
+  .to(".about__quote", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  }, "-=0.6")
+  .to(".about__description", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  }, "-=0.4")
+  .to(".about__extended-bio", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  }, "-=0.6")
+  .to(".about__skills-constellation", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out"
+  }, "-=0.4");
+
+  // Projects section
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".projects",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse"
+    }
+  })
+  .to(".projects__project", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  })
+  .to(".projects__title", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out"
+  }, "-=0.4")
+  .to(".project-card", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out",
+    stagger: 0.2
+  }, "-=0.6");
+
+  // Skills section
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skills",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse"
+    }
+  })
+  .to(".skills__project", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  })
+  .to(".skills__title", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out"
+  }, "-=0.4")
+  .to(".skills__categories", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  }, "-=0.6")
+  .to(".skills__circle", {
+    scale: 1,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  }, "-=0.4");
+
+  // Contact section
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".contact",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse"
+    }
+  })
+  .to(".contact__project", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  })
+  .to(".contact__title", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out"
+  }, "-=0.4")
+  .to(".contact__description", {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out"
+  }, "-=0.6")
+  .to(".contact__form-container", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out"
+  }, "-=0.4");
+}
+
+// Smooth scroll navigation
+document.addEventListener('DOMContentLoaded', function() {
+  const navItems = document.querySelectorAll('.nav__item[data-target]');
+
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        gsap.to(window, {
+          duration: 1.5,
+          scrollTo: {
+            y: targetSection,
+            offsetY: 80
+          },
+          ease: "power2.inOut"
+        });
+      }
+    });
+  });
+});
