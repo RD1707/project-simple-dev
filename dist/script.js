@@ -228,13 +228,7 @@ function animateOnScroll() {
     opacity: 1,
     duration: 0.8,
     ease: "power2.out"
-  }, "-=0.6")
-  .to(".about__skills-constellation", {
-    y: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "power2.out"
-  }, "-=0.4");
+  }, "-=0.6");
 
   // Projects section
   gsap.timeline({
@@ -292,12 +286,19 @@ function animateOnScroll() {
     duration: 0.8,
     ease: "power2.out"
   }, "-=0.6")
-  .to(".skills__circle", {
-    scale: 1,
+  .to(".skills__stats", {
+    x: 0,
     opacity: 1,
-    duration: 0.8,
+    duration: 1,
     ease: "power2.out"
-  }, "-=0.4");
+  }, "-=0.4")
+  .to(".stat-card", {
+    y: 0,
+    opacity: 1,
+    duration: 0.6,
+    ease: "power2.out",
+    stagger: 0.1
+  }, "-=0.6");
 
   // Contact section
   gsap.timeline({
