@@ -342,8 +342,40 @@ function animateOnScroll() {
   }, "-=0.4");
 }
 
+// Header materialization effect
+function initHeaderMaterialization() {
+  const header = document.querySelector('.header');
+  let isScrolling = false;
+
+  function handleScroll() {
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const threshold = 50; // Threshold in pixels
+
+        if (scrollY > threshold) {
+          header.classList.add('header--materialized');
+        } else {
+          header.classList.remove('header--materialized');
+        }
+
+        isScrolling = false;
+      });
+      isScrolling = true;
+    }
+  }
+
+  // Listen for scroll events
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Check initial state
+  handleScroll();
+}
+
 // Smooth scroll navigation
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize header materialization
+  initHeaderMaterialization();
   const navItems = document.querySelectorAll('.nav__item[data-target]');
   const mobileNavItems = document.querySelectorAll('.mobile-menu__item[data-target]');
 

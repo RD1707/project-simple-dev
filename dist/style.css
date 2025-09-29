@@ -17,6 +17,10 @@
   --color-grid-overlay: rgba(44, 62, 80, 0.03);
   --color-mountain-dark: #2a4c3e;
   --color-mountain-light: #5a8a7a;
+  /* Glassmorphism */
+  --color-glass-bg: rgba(230, 240, 236, 0.8);
+  --color-glass-border: rgba(44, 62, 80, 0.1);
+  --glass-blur: 10px;
   /* Typography */
   --font-primary: "General Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -163,6 +167,26 @@ body {
   left: 0;
   width: 100%;
   z-index: var(--z-index-main);
+  /* Default transparent state */
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+  transition:
+    background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header materialized state with glassmorphism */
+.header--materialized {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--color-glass-border);
+  box-shadow: 0 4px 6px rgba(44, 62, 80, 0.05);
 }
 
 .header__container {
