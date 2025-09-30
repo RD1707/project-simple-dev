@@ -1,315 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>simple developer - portfolio</title>
-    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
-<link rel="stylesheet" href="./style.css">
+<head>
+  <meta charset="UTF-8">
+  <title>simple developer - portfolio</title>
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-  </head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <div class="grid-container">
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+    <div class="grid-column"></div>
+  </div>
+
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+
+  <div class="preloader">
+    <div class="preloader__text-container">
+      <div class="preloader__text-cosmic">simple</div>
+      <div class="preloader__text-reflections">developer</div>
+    </div>
+    <div class="preloader__content">
+      <div class="preloader__overlay"></div>
+      <img src="https://images.unsplash.com/photo-1680472139496-aec545d8392b?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
+      <img src="https://images.unsplash.com/photo-1660659236367-710aa4ae7e19?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
+      <img src="https://images.unsplash.com/photo-1660121022318-3cb0f06e54ca?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
+      <img src="https://images.unsplash.com/photo-1640794082887-8346fb991e66?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
+      <img src="https://images.unsplash.com/photo-1660228652863-891f27cbe45c?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
+      <img src="https://images.unsplash.com/photo-1658498042419-be460a938f93?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
+    </div>
+    <div class="preloader__progress">
+      <div class="preloader__progress-bar"></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress"></div>
+
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <span class="logo-text">simple</span>
+        <span class="logo-dot"></span>
+      </div>
+      <div class="header__contact">
+        <div class="availability-badge">
+          <span class="availability-indicator"></span>
+          available for work
+        </div>
+        <div class="contact-email">souplemonpie@gmail.com</div>
+      </div>
+      <nav class="header__nav">
+        <div class="nav__desktop">
+          <div class="nav__item" data-target="about">
+            <span class="nav__text">about</span>
+          </div>
+          <div class="nav__item" data-target="projects">
+            <span class="nav__text">projects</span>
+          </div>
+          <div class="nav__item" data-target="contact">
+            <span class="nav__text">contact</span>
+          </div>
+          <div class="circles-container">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+          </div>
+        </div>
+
+    </div>
+  </header>
+
+  <nav class="side-nav">
+    <div class="side-nav__item active" data-section="hero">
+      <span class="side-nav__tooltip">home</span>
+    </div>
+    <div class="side-nav__item" data-section="about">
+      <span class="side-nav__tooltip">about</span>
+    </div>
+    <div class="side-nav__item" data-section="projects">
+      <span class="side-nav__tooltip">projects</span>
+    </div>
+    <div class="side-nav__item" data-section="skills">
+      <span class="side-nav__tooltip">skills</span>
+    </div>
+    <div class="side-nav__item" data-section="testimonials">
+      <span class="side-nav__tooltip">testimonials</span>
+    </div>
+    <div class="side-nav__item" data-section="contact">
+      <span class="side-nav__tooltip">contact</span>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero__background">
+      <div class="hero__gradient"></div>
+      <div class="hero__pattern"></div>
+    </div>
     
-  <body>
-  <!-- Grid Overlay -->
-<div class="grid-container">
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-  <div class="grid-column"></div>
-</div>
-
-<!-- Preloader -->
-<div class="preloader">
-  <div class="preloader__text-container">
-    <div class="preloader__text-cosmic">simple</div>
-    <div class="preloader__text-reflections">developer</div>
-  </div>
-  <div class="preloader__content">
-    <div class="preloader__overlay"></div>
-    <img src="https://images.unsplash.com/photo-1680472139496-aec545d8392b?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
-    <img src="https://images.unsplash.com/photo-1660659236367-710aa4ae7e19?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
-    <img src="https://images.unsplash.com/photo-1660121022318-3cb0f06e54ca?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
-    <img src="https://images.unsplash.com/photo-1640794082887-8346fb991e66?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
-    <img src="https://images.unsplash.com/photo-1660228652863-891f27cbe45c?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
-    <img src="https://images.unsplash.com/photo-1658498042419-be460a938f93?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space" class="preloader__image">
-  </div>
-</div>
-
-<!-- Header -->
-<header class="header">
-  <div class="header__container">
-    <div class="header__logo">simple</div>
-    <div class="header__contact">
-      available for work<br>
-      souplemonpie@gmail.com
-    </div>
-    <nav class="header__nav">
-      <div class="nav__desktop">
-        <div class="nav__item" data-target="about">about</div>
-        <div class="nav__item" data-target="projects">projects</div>
-        <div class="nav__item" data-target="contact">contact</div>
-        <div class="circles-container">
-          <div class="circle circle-1"></div>
-          <div class="circle circle-2"></div>
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span class="hero__title-line">
+            <span class="title-word">clean</span>
+            <span class="title-accent"></span>
+          </span>
+          <span class="hero__title-line">
+            <span class="title-word">code</span>
+            <span class="title-decoration">( )</span>
+          </span>
+        </h1>
+        <p class="hero__description">a developer focused on creating solutions through clean, efficient code. transforming complex ideas into simple, functional applications.</p>
+        
+        <div class="hero__cta-group">
+          <a href="#projects"><button class="btn btn--primary">
+            <span>view projects</span>
+            <svg class="btn__arrow" width="20" height="20" viewBox="0 0 20 20">
+              <path d="M5 10h10m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button></a>
         </div>
-      </div>
 
-      <!-- Mobile Hamburger Menu -->
-      <div class="nav__mobile">
-        <button class="hamburger" aria-label="Toggle navigation">
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-      <div class="mobile-menu">
-        <div class="mobile-menu__item" data-target="about">about</div>
-        <div class="mobile-menu__item" data-target="projects">projects</div>
-        <div class="mobile-menu__item" data-target="contact">contact</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="hero__content">
-      <div class="hero__project">simple portfolio / 2025</div>
-      <h1 class="hero__title">
-        <span class="hero__title-line">clean</span>
-        <span class="hero__title-line">code</span>
-      </h1>
-      <p class="hero__description">a developer focused on creating solutions through clean, efficient code. transforming complex ideas into simple, functional applications.</p>
-      <div class="hero__meta">
-        <div>
-          <p>speciality</p>
-          <p>full-stack</p>
-        </div>
-        <div>
-          <p>experience</p>
-          <p>3+ years</p>
-        </div>
-      </div>
-    </div>
-    <div class="hero__image-container">
-      <img src="https://images.unsplash.com/photo-1660659236367-710aa4ae7e19?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Astronaut" class="hero__image">
-    </div>
-  </div>
-</section>
-
-<!-- About Section -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about__content">
-      <div class="about__project">about simple / developer</div>
-      <h2 class="about__title">
-        <span class="about__title-line">crafting digital</span>
-        <span class="about__title-line">experiences</span>
-      </h2>
-      <div class="about__quote">
-        <p>"in the vast cosmos of code, i find beauty in simplicity and elegance in functionality"</p>
-      </div>
-      <p class="about__description">a developer navigating the infinite possibilities of technology. focused on creating solutions through clean, efficient code that bridges the gap between complex problems and simple user experiences.</p>
-
-      <div class="about__extended-bio">
-        <p>my journey in software development began with a curiosity for understanding how things work beneath the surface. over the years, i've cultivated expertise in both frontend and backend technologies, always prioritizing user experience and code maintainability.</p>
-
-        <p>i believe in the power of continuous learning and staying current with emerging technologies while maintaining a solid foundation in proven methodologies. whether working solo or collaborating with teams, i bring a methodical approach to problem-solving and a commitment to delivering high-quality solutions.</p>
-
-        <p>when i'm not coding, you'll find me exploring new frameworks, contributing to open source projects, or sharing knowledge with the developer community. i'm always excited about the next challenge and the opportunity to create something meaningful.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section class="projects" id="projects">
-  <div class="container">
-    <div class="projects__header">
-      <div class="projects__project">selected work / portfolio</div>
-      <h2 class="projects__title">featured projects</h2>
-    </div>
-    <div class="projects__grid">
-      <div class="project-card">
-        <div class="project-card__image">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
-        </div>
-        <div class="project-card__content">
-          <h3 class="project-card__title">dashboard analytics</h3>
-          <p class="project-card__description">real-time analytics dashboard built with react and d3.js</p>
-          <div class="project-card__tech">
-            <span>react</span>
-            <span>d3.js</span>
-            <span>node.js</span>
+        <div class="hero__meta">
+          <div class="meta-item">
+            <p class="meta-label">speciality</p>
+            <p class="meta-value">full-stack</p>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <p class="meta-label">experience</p>
+            <p class="meta-value">3+ years</p>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <p class="meta-label">location</p>
+            <p class="meta-value">remote</p>
           </div>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-card__image">
-          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
-        </div>
-        <div class="project-card__content">
-          <h3 class="project-card__title">e-commerce platforms</h3>
-          <p class="project-card__description">full-stack e-commerce solution with payment integration</p>
-          <div class="project-card__tech">
-            <span>vue.js</span>
-            <span>express</span>
-            <span>stripe</span>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-card__image">
-          <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
-        </div>
-        <div class="project-card__content">
-          <h3 class="project-card__title">task management apps</h3>
-          <p class="project-card__description">collaborative project management tool with real-time updates</p>
-          <div class="project-card__tech">
-            <span>typescript</span>
-            <span>socket.io</span>
-            <span>mongodb</span>
+      
+      <div class="hero__image-container">
+        <div class="image-frame">
+          <div class="image-overlay"></div>
+          <img src="https://images.unsplash.com/photo-1660659236367-710aa4ae7e19?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Astronaut" class="hero__image">
+          <div class="image-decoration">
+            <span class="decoration-text">// creating digital experiences</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Skills Section -->
-<section class="skills" id="skills">
-  <div class="container">
-    <div class="skills__content">
-      <div class="skills__project">technical expertise / tools</div>
-      <h2 class="skills__title">skills & tools</h2>
-      <div class="skills__categories">
-        <div class="skills__category">
-          <h3 class="skills__category-title">frontend</h3>
-          <ul class="skills__list">
-            <li>javascript / typescript</li>
-            <li>react / vue.js</li>
-            <li>html5 / css3</li>
-            <li>sass / tailwind css</li>
-            <li>webpack / vite</li>
-          </ul>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="section-decoration">
+      <span class="section-number">01</span>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="container">
+      <div class="about__content">
+        <h2 class="about__title">
+          <span class="about__title-line">crafting digital</span>
+          <span class="about__title-line">
+            experiences
+            <span class="title-highlight"></span>
+          </span>
+        </h2>
+        
+        <div class="about__quote">
+          <span class="quote-mark">"</span>
+          <p>in the vast cosmos of code, i find beauty in simplicity and elegance in functionality</p>
+          <span class="quote-mark">"</span>
         </div>
-        <div class="skills__category">
-          <h3 class="skills__category-title">backend</h3>
-          <ul class="skills__list">
-            <li>node.js / express</li>
-            <li>python / django</li>
-            <li>postgresql / mongodb</li>
-            <li>rest apis / graphql</li>
-            <li>docker / aws</li>
-          </ul>
-        </div>
-        <div class="skills__category">
-          <h3 class="skills__category-title">tools</h3>
-          <ul class="skills__list">
-            <li>git / github</li>
-            <li>figma / adobe xd</li>
-            <li>jest / cypress</li>
-            <li>linux / terminal</li>
-            <li>vs code / vim</li>
-          </ul>
+        
+        <div class="about__grid">
+          <div class="about__main">
+            <p class="about__description">a developer navigating the infinite possibilities of technology. focused on creating solutions through clean, efficient code that bridges the gap between complex problems and simple user experiences.</p>
+            
+            <div class="about__stats">
+              <div class="stat-card">
+                <div class="stat-number" data-target="250">0</div>
+                <div class="stat-label">commits this year</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">technologies mastered</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-label">cups of coffee</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__extended">
+            <div class="bio-card">
+              <h3 class="bio-title">journey</h3>
+              <p>my journey in software development began with a curiosity for understanding how things work beneath the surface. over the years, i've cultivated expertise in both frontend and backend technologies.</p>
+            </div>
+
+            <div class="bio-card">
+              <h3 class="bio-title">philosophy</h3>
+              <p>i believe in the power of continuous learning and staying current with emerging technologies while maintaining a solid foundation in proven methodologies.</p>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
-    <div class="skills__visual">
-      <div class="skills__metrics">
-        <div class="metric-item">
-          <div class="metric-number">3+</div>
-          <div class="metric-label">years experience</div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="section-decoration">
+      <span class="section-number">02</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="projects__header">
+        <h2 class="projects__title">featured projects</h2>
+      </div>
+      
+      <div class="projects__grid">
+        <div class="project-card" data-category="web">
+          <div class="project-card__image">
+            <div class="project-overlay">
+              <span class="project-number">01</span>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View project">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M10 3l7 7-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+                <a href="#" class="project-link" aria-label="View code">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M7 7l-4 3 4 3m6-6l4 3-4 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
+          </div>
+          <div class="project-card__content">
+            <span class="project-year">2024</span>
+            <h3 class="project-card__title">dashboard analytics</h3>
+            <p class="project-card__description">real-time analytics dashboard built with react and d3.js for data visualization</p>
+            <div class="project-card__tech">
+              <span>react</span>
+              <span>d3.js</span>
+              <span>node.js</span>
+            </div>
+          </div>
         </div>
-        <div class="metric-divider"></div>
-        <div class="metric-item">
-          <div class="metric-number">25+</div>
-          <div class="metric-label">projects completed</div>
+
+        <div class="project-card" data-category="web">
+          <div class="project-card__image">
+            <div class="project-overlay">
+              <span class="project-number">02</span>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View project">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M10 3l7 7-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+                <a href="#" class="project-link" aria-label="View code">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M7 7l-4 3 4 3m6-6l4 3-4 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
+          </div>
+          <div class="project-card__content">
+            <span class="project-year">2024</span>
+            <h3 class="project-card__title">e-commerce platform</h3>
+            <p class="project-card__description">full-stack e-commerce solution with payment integration and inventory management</p>
+            <div class="project-card__tech">
+              <span>vue.js</span>
+              <span>express</span>
+              <span>stripe</span>
+            </div>
+          </div>
         </div>
-        <div class="metric-divider"></div>
-        <div class="metric-item">
-          <div class="metric-number">∞</div>
-          <div class="metric-label">learning mindset</div>
+
+        <div class="project-card" data-category="mobile">
+          <div class="project-card__image">
+            <div class="project-overlay">
+              <span class="project-number">03</span>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View project">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M10 3l7 7-7 7m7-7H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+                <a href="#" class="project-link" aria-label="View code">
+                  <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M7 7l-4 3 4 3m6-6l4 3-4 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="project">
+          </div>
+          <div class="project-card__content">
+            <span class="project-year">2023</span>
+            <h3 class="project-card__title">task management app</h3>
+            <p class="project-card__description">collaborative project management tool with real-time updates and team features</p>
+            <div class="project-card__tech">
+              <span>typescript</span>
+              <span>socket.io</span>
+              <span>mongodb</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects__cta">
+        <a href="https://github.com/RD1707"><button class="btn btn--outline">
+          <span>view all projects</span>
+          <svg class="btn__arrow" width="20" height="20" viewBox="0 0 20 20">
+            <path d="M5 10h10m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="section-decoration">
+      <span class="section-number">03</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="skills__content">
+        <h2 class="skills__title">skills & tools</h2>
+        
+        <div class="skills__categories">
+          <div class="skills__category">
+            <div class="category-header">
+              <span class="category-icon">⟨/⟩</span>
+              <h3 class="skills__category-title">frontend</h3>
+            </div>
+            <ul class="skills__list">
+              <li>
+                <span class="skill-name">javascript / typescript</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 90%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">react / vue.js</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 85%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">html5 / css3</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 95%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">sass / tailwind css</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 80%"></span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <div class="category-header">
+              <span class="category-icon">{ }</span>
+              <h3 class="skills__category-title">backend</h3>
+            </div>
+            <ul class="skills__list">
+              <li>
+                <span class="skill-name">node.js / express</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 88%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">python / django</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 75%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">postgresql / mongodb</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 82%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">rest apis / graphql</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 85%"></span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <div class="category-header">
+              <span class="category-icon">⌘</span>
+              <h3 class="skills__category-title">tools</h3>
+            </div>
+            <ul class="skills__list">
+              <li>
+                <span class="skill-name">git / github</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 92%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">figma / adobe xd</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 70%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">jest / cypress</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 78%"></span>
+                </span>
+              </li>
+              <li>
+                <span class="skill-name">docker / aws</span>
+                <span class="skill-level">
+                  <span class="level-fill" style="width: 72%"></span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills__visual">
+        <div class="skills__metrics">
+          <div class="metric-card">
+            <div class="metric-icon">✦</div>
+            <div class="metric-number" data-target="3">0</div>
+            <div class="metric-label">years of<br>experience</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon">◈</div>
+            <div class="metric-number" data-target="25">0</div>
+            <div class="metric-label">projects<br>completed</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon">∞</div>
+            <div class="metric-number">∞</div>
+            <div class="metric-label">learning<br>mindset</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact__header">
-      <div class="contact__project">get in touch / collaboration</div>
-      <h2 class="contact__title">let's work together</h2>
-      <p class="contact__description">have a project in mind or want to collaborate? drop me a message and let's create something amazing together.</p>
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-decoration">
+      <span class="section-number">04</span>
+      <div class="section-line"></div>
     </div>
 
-    <div class="contact__form-container">
-      <form class="contact__form" id="contact-form">
-        <div class="form-group">
-          <label for="name" class="form-label">name</label>
-          <input type="text" id="name" name="name" class="form-input" required>
+    <div class="container">
+      <div class="testimonials__header">
+        <h2 class="testimonials__title">what clients say</h2>
+      </div>
+
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"exceptional developer with a keen eye for detail. delivered our project ahead of schedule with clean, maintainable code."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4 class="author-name">sarah chen</h4>
+              <p class="author-role">cto, techstartup inc.</p>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="email" class="form-label">email</label>
-          <input type="email" id="email" name="email" class="form-input" required>
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"transformed our vision into reality. great communication throughout the project and excellent problem-solving skills."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4 class="author-name">mike johnson</h4>
+              <p class="author-role">founder, digital agency</p>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="subject" class="form-label">subject</label>
-          <input type="text" id="subject" name="subject" class="form-input" placeholder="project collaboration, freelance work, etc.">
-        </div>
-
-        <div class="form-group">
-          <label for="message" class="form-label">message</label>
-          <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="tell me about your project, ideas, or how we can work together..." required></textarea>
-        </div>
-
-        <button type="submit" class="form-submit">
-          <span class="submit-text">send message</span>
-          <span class="submit-arrow">→</span>
-        </button>
-      </form>
-
-      <div class="contact__alternative">
-        <div class="contact__divider">
-          <span>or reach me directly</span>
-        </div>
-        <div class="contact__direct-links">
-          <a href="mailto:hello@simple.dev" class="direct-link">
-            <span class="direct-link-icon">@</span>
-            <span class="direct-link-text">hello@simple.dev</span>
-          </a>
-          <a href="https://github.com/simple" class="direct-link">
-            <span class="direct-link-text">github.com/simple</span>
-          </a>
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"reliable, creative, and technically proficient. would definitely work with again on future projects."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4 class="author-name">emily davis</h4>
+              <p class="author-role">product manager, saas co.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-    <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js'></script><script  src="./script.js"></script>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="section-decoration">
+      <span class="section-number">05</span>
+      <div class="section-line"></div>
+    </div>
 
-  </body>
-  
+    <div class="container">
+      <div class="contact__header">
+        <h2 class="contact__title">let's work together</h2>
+        <p class="contact__description">have a project in mind or want to collaborate? drop me a message and let's create something amazing together.</p>
+      </div>
+
+      <div class="contact__form-container">
+        <form class="contact__form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">name</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+              <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">email</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+              <span class="form-line"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">subject</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="project collaboration, freelance work, etc.">
+            <span class="form-line"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">message</label>
+            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="tell me about your project, ideas, or how we can work together..." required></textarea>
+            <span class="form-line"></span>
+          </div>
+
+          <button type="submit" class="form-submit">
+            <span class="submit-text">send message</span>
+            <div class="submit-bg"></div>
+            <span class="submit-arrow">→</span>
+          </button>
+        </form>
+
+        <div class="contact__info">
+          <div class="contact__alternative">
+            <h3 class="info-title">let's connect</h3>
+            <div class="contact__direct-links">
+              <a href="mailto:hello@simple.dev" class="direct-link">
+                <span class="link-icon">@</span>
+                <span class="link-text">souplemonpie@gmail.com</span>
+              </a>
+              <a href="https://github.com/RD1707" class="direct-link">
+                <span class="link-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                  </svg>
+                </span>
+                <span class="link-text">github.com/RD1707</span>
+              </a>
+              <a href="https://linkedin.com/in/simple" class="direct-link">
+                <span class="link-icon">in</span>
+                <span class="link-text">linkedin/simple</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__availability">
+            <h3 class="info-title">current status</h3>
+            <div class="status-card">
+              <div class="status-indicator active"></div>
+              <span class="status-text">available for freelance projects</span>
+            </div>
+            <p class="timezone-info">timezone: UTC-3 (brazil)</p>
+            <p class="response-time">usual response time: within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <h3 class="footer__logo">simple<span class="logo-dot">.</span></h3>
+          <p class="footer__tagline">creating digital experiences with clean code</p>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer__column">
+            <h4 class="footer__title">navigation</h4>
+            <ul class="footer__list">
+              <li><a href="#about">about</a></li>
+              <li><a href="#projects">projects</a></li>
+              <li><a href="#skills">skills</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h4 class="footer__title">connect</h4>
+            <ul class="footer__list">
+              <li><a href="https://github.com/RD1707">github</a></li>
+              <li><a href="https://x.com/Panda03365472">twitter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">© 2025 simple developer. all rights reserved.</p>
+          <button class="back-to-top" aria-label="Back to top">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <path d="M10 17V3m0 0l-7 7m7-7l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
 </html>
